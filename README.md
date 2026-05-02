@@ -1,8 +1,8 @@
 # Information Retrieval Assignment — ECE328, University of Thessaly
 
-**Author:** Nikos Mavros (AEM 03741)
+**Author:** Nikos Mavros 
 **Course:** ECE328 — Information Retrieval (Spring 2026)
-**Submission:** single PDF report, generated from `report/main.tex`.
+
 
 This repository contains the code, results, and report for the ECE328
 Information Retrieval coursework.
@@ -57,4 +57,4 @@ cd report/
 latexmk -pdf main.tex
 ```
 
-This produces `main.pdf`, the file submitted to `draf@uth.gr`.
+
