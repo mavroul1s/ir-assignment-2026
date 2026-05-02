@@ -171,11 +171,63 @@ pairwise Kendall $\tau$ between all $\binom{5}{2} = 10$ pairs of rankings.
 
 \subsubsection*{Results}
 
+Figures~\ref{fig:p1b_n0}--\ref{fig:p1b_n7} show the PageRank value of each
+node as a function of the damping factor $a$, one figure per node.
+
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.92\textwidth]{p1b_curves.png}
-  \caption{PageRank value of each node as a function of the damping factor $a$.}
-  \label{fig:p1b_curves}
+  \begin{subfigure}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{p1b_node0.png}
+    \caption{Node 0}
+    \label{fig:p1b_n0}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{p1b_node1.png}
+    \caption{Node 1}
+    \label{fig:p1b_n1}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{p1b_node2.png}
+    \caption{Node 2}
+    \label{fig:p1b_n2}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{p1b_node3.png}
+    \caption{Node 3}
+    \label{fig:p1b_n3}
+  \end{subfigure}
+  \caption{Part 1B — PageRank vs damping factor, nodes 0--3.}
+  \label{fig:p1b_part1}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{p1b_node4.png}
+    \caption{Node 4}
+    \label{fig:p1b_n4}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{p1b_node5.png}
+    \caption{Node 5}
+    \label{fig:p1b_n5}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{p1b_node6.png}
+    \caption{Node 6}
+    \label{fig:p1b_n6}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{p1b_node7.png}
+    \caption{Node 7}
+    \label{fig:p1b_n7}
+  \end{subfigure}
+  \caption{Part 1B — PageRank vs damping factor, nodes 4--7.}
+  \label{fig:p1b_part2}
 \end{figure}
 
 \begin{figure}[H]
@@ -188,7 +240,7 @@ pairwise Kendall $\tau$ between all $\binom{5}{2} = 10$ pairs of rankings.
 
 \subsubsection*{Discussion}
 
-From Figure~\ref{fig:p1b_curves}, the absolute PageRank values change
+From Figures~\ref{fig:p1b_part1}--\ref{fig:p1b_part2}, the absolute PageRank values change
 substantially as $a$ increases: nodes~5 and~6---which together form a sink
 strongly absorbing random-walk probability (they exchange edges between each
 other and receive edges from most other nodes)---see their scores rise sharply
@@ -481,19 +533,29 @@ $f \in \{10, 20, \ldots, 100\}$.
 \begin{figure}[H]
   \centering
   \begin{subfigure}[b]{0.48\textwidth}
-    \includegraphics[width=\textwidth]{p3a_precision.png}
-    \caption{Precision@10 vs latent factors}
-    \label{fig:p3a_prec}
+    \includegraphics[width=\textwidth]{p3a_precision_lastfm.png}
+    \caption{Precision@10 — Last.FM}
+    \label{fig:p3a_prec_lfm}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.48\textwidth}
-    \includegraphics[width=\textwidth]{p3a_recall.png}
-    \caption{Recall@10 vs latent factors}
-    \label{fig:p3a_rec}
+    \includegraphics[width=\textwidth]{p3a_recall_lastfm.png}
+    \caption{Recall@10 — Last.FM}
+    \label{fig:p3a_rec_lfm}
   \end{subfigure}
-  \caption{Part 3A: Precision@10 and Recall@10 as a function of the
-           number of latent factors ($k=10$, 10 runs each).
-           Error bars show $\pm$1 standard deviation.}
+  \begin{subfigure}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{p3a_precision_ml1m.png}
+    \caption{Precision@10 — MovieLens 1M}
+    \label{fig:p3a_prec_ml}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{p3a_recall_ml1m.png}
+    \caption{Recall@10 — MovieLens 1M}
+    \label{fig:p3a_rec_ml}
+  \end{subfigure}
+  \caption{Part 3A: Precision@10 and Recall@10 as a function of the number of
+           latent factors ($k=10$, 10 runs each, error bars = $\pm$1 std).}
   \label{fig:p3a}
 \end{figure}
 
@@ -527,19 +589,29 @@ $k \in \{2, 4, 6, \ldots, 20\}$.
 \begin{figure}[H]
   \centering
   \begin{subfigure}[b]{0.48\textwidth}
-    \includegraphics[width=\textwidth]{p3b_precision.png}
-    \caption{Precision@k vs k}
-    \label{fig:p3b_prec}
+    \includegraphics[width=\textwidth]{p3b_precision_lastfm.png}
+    \caption{Precision@k — Last.FM}
+    \label{fig:p3b_prec_lfm}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.48\textwidth}
-    \includegraphics[width=\textwidth]{p3b_recall.png}
-    \caption{Recall@k vs k}
-    \label{fig:p3b_rec}
+    \includegraphics[width=\textwidth]{p3b_recall_lastfm.png}
+    \caption{Recall@k — Last.FM}
+    \label{fig:p3b_rec_lfm}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{p3b_precision_ml1m.png}
+    \caption{Precision@k — MovieLens 1M}
+    \label{fig:p3b_prec_ml}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{p3b_recall_ml1m.png}
+    \caption{Recall@k — MovieLens 1M}
+    \label{fig:p3b_rec_ml}
   \end{subfigure}
   \caption{Part 3B: Precision@k and Recall@k as a function of $k$
-           (factors=50, 10 runs each). Error bars show $\pm$1 standard
-           deviation.}
+           (factors=50, 10 runs each, error bars = $\pm$1 std).}
   \label{fig:p3b}
 \end{figure}
 
