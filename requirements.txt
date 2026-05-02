@@ -1,0 +1,17 @@
+# Core scientific stack
+numpy>=1.26
+scipy>=1.11
+pandas>=2.0
+matplotlib>=3.7
+
+# Graphs (Part 1)
+networkx>=3.0
+
+# Recommender systems (Part 3)
+implicit>=0.7.2
+scikit-learn>=1.3
+tqdm>=4.66
+
+# Notebooks
+jupyter>=1.0
+ipykernel>=6.0
