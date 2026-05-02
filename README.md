@@ -50,11 +50,5 @@ The notebooks download their inputs on first run.
 - Random seeds are set inside each notebook so re-runs produce identical figures.
 - The `results/` folder is committed so the report can be re-built without re-running anything.
 
-## Building the report
-
-```bash
-cd report/
-latexmk -pdf main.tex
-```
 
 
