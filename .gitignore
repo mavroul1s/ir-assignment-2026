@@ -22,7 +22,7 @@ Thumbs.db
 .idea/
 *.swp
 
-# LaTeX
+# LaTeX — ignore build artefacts, keep source and PDF
 report/*.aux
 report/*.log
 report/*.out
@@ -32,6 +32,14 @@ report/*.blg
 report/*.synctex.gz
 report/*.fdb_latexmk
 report/*.fls
+report/_minted*
+# ignore the figures subfolder inside report/ (PNGs live in results/figures/)
+report/figures/
 
-# Results - keep figures and tables but ignore intermediate files
+# Explicitly un-ignore the files we want tracked in report/
+!report/main.tex
+!report/refs.bib
+!report/*.pdf
+
+# Results - keep figures and tables
 results/*.tmp
