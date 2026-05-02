@@ -1,0 +1,5 @@
+estimator,constant_c,exponent
+(a) cf_1,4663.0,
+(b) mean(cf_i * i),8733.537457850754,
+(b) median(cf_i * i),7788.0,
+(c) log-log fit (top 1000),24874.388083167036,1.0803544871492257
