@@ -22,9 +22,25 @@ Thumbs.db
 .idea/
 *.swp
 
-# LaTeX — ignore everything except the final PDF
-report/*
-!report/*.pdf
+# LaTeX — ignore source and build files anywhere
+*.tex
+*.bib
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+_minted*
+
+# ignore the figures subfolder inside report/ (PNGs live in results/figures/)
+report/figures/
+
+# Always track PDFs anywhere
+!*.pdf
 
 # Results - keep figures and tables
 results/*.tmp
